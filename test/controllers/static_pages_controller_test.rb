@@ -1,6 +1,8 @@
 require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
+
+  # special function setup is automatically run before every test
   def setup
     @base_title = "Ruby on Rails Sample App"
   end
