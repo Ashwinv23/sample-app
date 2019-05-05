@@ -23,4 +23,10 @@ class UserTest < ActiveSupport::TestCase
     @user.email = "a" * 244 + "@example.com"
     assert_not @user.valid?
   end
+
+  test "email should be unique" do
+    dup_user = @user.dup
+    @user.save
+    assert_not dup_user.valid?
+  end
 end
